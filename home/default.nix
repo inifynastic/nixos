@@ -25,13 +25,18 @@
 	valgrind
 	ruby
 	python3
+	cmake
+	gnumake
+	ninja
 	
+	qtcreator	
 	vesktop
 	vscode
+	sublime
 	geany
 	vivaldi
 	neovim
-	xfce.thunar
+	thunar
 	obs-studio
 	vlc
 	libreoffice
@@ -45,10 +50,10 @@
 	alacritty
 	grim
 	slurp
-	mpvpaper
-	swww
+	swaybg
 	eww
 	swaylock-effects
+  swayidle
 	waybar
 	wev
 	brightnessctl
@@ -69,7 +74,6 @@
 
 	curl
 	wget 
-
 	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 home.pointerCursor = {

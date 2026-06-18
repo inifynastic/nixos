@@ -61,6 +61,7 @@
 		lshw
 		pciutils
 		capitaine-cursors
+		mesa-demos
 	];
 	fonts.packages = with pkgs; [
 		noto-fonts-color-emoji 
@@ -98,7 +99,8 @@
 	nixpkgs.overlays = [
   	(final: prev: {
      	niri = inputs.nixpkgs-unstable.legacyPackages.${prev.stdenv.hostPlatform.system}.niri;
-    	})
+    	qt6 = inputs.nixpkgs-unstable.legacyPackages.${prev.stdenv.hostPlatform.system}.qt6;
+	})
   	];
 #============= Utilities================
 	security.rtkit.enable = true;
@@ -141,10 +143,11 @@
 #------------------------------------------------------------------------------------------------------------------
 # DE/WM
 programs.niri.enable = true;
-
+programs.regreet.enable = true;
 	services = {
-		displayManager.sddm.enable = true;
-		displayManager.sddm.wayland.enable = true;
+		# displayManager.sddm.enable = true;
+		# displayManager.sddm.wayland.enable = true;
+    greetd.enable = true;
 	};
 
   # Configure keymap in X11
