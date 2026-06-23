@@ -62,6 +62,8 @@
 		pciutils
 		capitaine-cursors
 		mesa-demos
+
+    #qtgreet
 	];
 	fonts.packages = with pkgs; [
 		noto-fonts-color-emoji 
@@ -147,7 +149,7 @@ programs.regreet.enable = true;
 	services = {
 		# displayManager.sddm.enable = true;
 		# displayManager.sddm.wayland.enable = true;
-    greetd.enable = true;
+                greetd.enable = true;
 	};
 
   # Configure keymap in X11

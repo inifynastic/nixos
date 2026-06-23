@@ -29,7 +29,7 @@
 	gnumake
 	ninja
 	
-	qtcreator	
+	qtcreator
 	vesktop
 	vscode
 	sublime
@@ -39,9 +39,8 @@
 	thunar
 	obs-studio
 	vlc
-	libreoffice
+	libreoffice-fresh
 	
-	librewolf
 	tor
 	
 	mako
@@ -53,7 +52,6 @@
 	swaybg
 	eww
 	swaylock-effects
-  swayidle
 	waybar
 	wev
 	brightnessctl
@@ -83,7 +81,29 @@ home.pointerCursor = {
     size = 24;
     package = pkgs.capitaine-cursors;
 };
+services.swayidle = {
+  enable = true;
 
+  timeouts = [
+    {
+      timeout = 600;
+      command = "swaylock -f";
+    }
+    {
+      timeout = 900;
+      command = "niri msg action power-off-monitors";
+      resumeCommand = "niri msg action power-on-monitors";
+    }
+    {
+      timeout = 1800;
+      command = "systemctl suspend";
+    }
+  ];
+
+  events = {
+    "before-sleep" = "swaylock -f";
+  };
+};
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
     home.file = {
