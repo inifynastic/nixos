@@ -101,13 +101,20 @@
 	nixpkgs.overlays = [
   	(final: prev: {
      	niri = inputs.nixpkgs-unstable.legacyPackages.${prev.stdenv.hostPlatform.system}.niri;
-    	qt6 = inputs.nixpkgs-unstable.legacyPackages.${prev.stdenv.hostPlatform.system}.qt6;
+    	# qt6 = inputs.nixpkgs-unstable.legacyPackages.${prev.stdenv.hostPlatform.system}.qt6;
 	})
   	];
 #============= Utilities================
 	security.rtkit.enable = true;
 	networking.networkmanager.enable = true;
-	hardware.bluetooth.enable = true;
+	hardware.bluetooth ={
+    enable = true;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+      };
+    };
+  };
 	services = {
 	gnome.gnome-keyring.enable = true;
 	power-profiles-daemon.enable = true;

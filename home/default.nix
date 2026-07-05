@@ -30,7 +30,8 @@
 	ninja
 	
 	qtcreator
-	vesktop
+	# vesktop
+  discord
 	vscode
 	sublime
 	geany
