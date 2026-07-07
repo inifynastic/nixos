@@ -23,6 +23,12 @@
 		useOSProber = true;
 	};
 };
+
+boot.kernelParams = [
+  "ignore_loglevel"
+  "initcall_debug"
+  "no_console_suspend"
+];
 	
 	hardware.graphics.enable = true;
 	services.xserver.videoDrivers = ["nvidia"];
@@ -62,6 +68,8 @@
 		pciutils
 		capitaine-cursors
 		mesa-demos
+    dmidecode
+    netcat-openbsd
 
     #qtgreet
 	];

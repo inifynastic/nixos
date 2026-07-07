@@ -41,6 +41,7 @@
 	obs-studio
 	vlc
 	libreoffice-fresh
+  gdb
 	
 	tor
 	
