@@ -1,0 +1,44 @@
+daemonize
+clock
+timestr=%H:%M
+datestr=%Y-%m-%d
+effect-blur=7x5
+effect-vignette=0.5:0.5
+screenshots
+indicator
+indicator-radius=120
+indicator-thickness=10
+
+# Background & inside
+color=000000
+inside-color=1F1F1F88
+inside-clear-color=00000088
+inside-caps-lock-color=00000088
+inside-ver-color=00000088
+inside-wrong-color=00000088
+
+# Ring
+ring-color=FFFFFF
+ring-clear-color=7DF9FF
+ring-caps-lock-color=00FFFF
+ring-ver-color=5AFF4D
+ring-wrong-color=9b0000
+
+# Key highlights
+key-hl-color=43434D
+bs-hl-color=00FFFF
+caps-lock-key-hl-color=FFFFFF
+caps-lock-bs-hl-color=00FFFF
+
+# Text
+text-color=FFFFFF
+text-clear-color=FFFFFF
+text-caps-lock-color=FFFFFF
+text-ver-color=5AFF4D
+text-wrong-color=9b0000
+
+# Separator
+separator-color=00000000
+
+# Font
+font="monospace"

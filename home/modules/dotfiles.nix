@@ -1,26 +1,35 @@
 { ... }:
 
 {
-  home.file = {
-	".config/niri/config.kdl" = {
-		source = ../dotfiles/niri/config.kdl;
+
+	xdg.configFile = {
+
+		"niri" = {
+			source = ../dotfiles/niri;
+			recursive = true;
+			force = true;
+		};
+		
+		"waybar"={
+			source = ../dotfiles/waybar;
+			force = true;
+			recursive = true;
+		};
+
+		"alacritty"={
+			source = ../dotfiles/alacritty;
+			force = true;
+		};
+
+		"fuzzel"={
+			source = ../dotfiles/fuzzel;
+			force = true;
+		};
+	};
+
+  xdg.dataFile."resources" = {
+		source = ../resources;
+		recursive = true;
 		force = true;
 	};
-	".config/waybar/config.jsonc"={
-		source = ../dotfiles/waybar/config.jsonc;
-		force = true;
-	};
-	".config/waybar/style.css"={
-		source = ../dotfiles/waybar/style.css;
-		force = true;
-	};
-	".config/alacritty/alacritty.toml"={
-		source = ../dotfiles/alacritty/alacritty.toml;
-		force = true;
-	};
-	".config/fuzzel/fuzzel.ini"={
-		source = ../dotfiles/fuzzel/fuzzel.ini;
-		force = true;
-	};
-  };
 }

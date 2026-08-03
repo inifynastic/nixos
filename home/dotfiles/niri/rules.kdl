@@ -1,0 +1,32 @@
+window-rule {
+    match is-focused=false
+    opacity 0.8
+    background-effect {
+        blur true
+        xray true
+    }
+}
+window-rule {
+    match app-id="vesktop"
+
+    background-effect {
+        blur true
+        xray true
+    }
+}
+window-rule {
+    match app-id="Alacritty"
+
+    background-effect {
+        blur true
+	    xray true
+    }
+}
+
+// Enable blur behind the fuzzel launcher.
+
+window-rule {
+    geometry-corner-radius 8 
+    draw-border-with-background false
+    clip-to-geometry true
+}

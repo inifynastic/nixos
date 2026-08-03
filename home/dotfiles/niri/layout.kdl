@@ -1,0 +1,92 @@
+animations {
+    // Uncomment to turn off all animations.
+    // off
+
+    // Slow down all animations by this factor. Values below 1 speed them up instead.
+    // slowdown 3.0
+}
+
+layout {
+    // Set gaps around windows in logical pixels.
+    gaps 10
+
+    center-focused-column "never"
+    
+    //always-center-single-column
+    
+    //empty-workspace-above-first
+    
+    default-column-display "normal"
+    
+    default-column-width{}
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    focus-ring {
+	off
+        width 3
+
+        // active-color "#7fc8ff"
+	active-gradient from="#00FFFF" to="#FFFFFF" angle=45
+        
+	inactive-color "#505050"
+	
+    }
+
+    border {
+
+        width 4
+         active-color "#FFFFFF"
+	//active-gradient from="#00FFFF" to="#FFFFFF" angle=45
+        inactive-color "#505050"
+        urgent-color "#9b0000"
+        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+    }
+
+    // You can enable drop shadows for windows.
+    shadow {
+        off
+
+         //draw-behind-window true
+	 draw-behind-window true
+
+        // You can change how shadows look. The values below are in logical
+        // pixels and match the CSS box-shadow properties.
+
+        // Softness controls the shadow blur radius.
+        softness 30
+
+        // Spread expands the shadow.
+        spread 5
+
+        // Offset moves the shadow relative to the window.
+        offset x=0 y=5
+        // You can also change the shadow color and opacity.
+        color "#0007"
+    }
+    tab-indicator {
+        width 8
+        gap 8
+        length total-proportion=1.0
+        position "top"
+        place-within-column
+    
+    }
+    insert-hint {
+         off
+        color "#ffc87f80"
+        gradient from="#ffbb6680" to="#ffc88080" angle=45 relative-to="workspace-view"
+    }
+
+    struts {
+        // left 64
+        // right 64
+        // top 64
+        // bottom 64
+    }
+    background-color "transparent"
+}

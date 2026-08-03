@@ -1,0 +1,29 @@
+# ~/.config/mako/config
+
+font=monospace 11
+background-color=#1a1a1a
+text-color=#e0e0e0
+border-color=#444444
+border-radius=6
+border-size=1
+padding=10
+margin=10
+width=350
+height=100
+max-visible=5
+
+# Urgency levels
+[urgency=low]
+background-color=#1a1a1a
+text-color=#888888
+border-color=#333333
+
+[urgency=normal]
+background-color=#1a1a1a
+text-color=#e0e0e0
+border-color=#444444
+
+[urgency=high]
+background-color=#1a1a1a
+text-color=#ff5555
+border-color=#9b0000
