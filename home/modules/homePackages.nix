@@ -1,0 +1,76 @@
+{ pkgs, inputs, ... }:
+
+{
+  home.packages = with pkgs; [
+	# Devloper Tools
+	gcc
+	valgrind
+	ruby
+	python3
+	cmake
+	gnumake
+	ninja
+	zip
+	unzip
+	gdb 
+
+	
+	# IDE / Text Editors
+	qtcreator
+	vscode
+	emacs
+	geany
+	neovim
+
+	
+	# Wayland Desktop
+  discord
+	
+	vivaldi
+	tor
+	
+	thunar
+	
+	obs-studio
+	vlc
+	
+	libreoffice-fresh
+
+	# Desktop config stuff	
+	mako
+	fuzzel
+	wl-clipboard
+	alacritty
+	grim
+	slurp
+	swaybg
+	swaylock-effects
+	waybar
+	wev
+	brightnessctl
+	wlogout
+	
+	#Icon themes
+	papirus-icon-theme
+
+
+	# FUN STUFF
+	fortune
+	cowsay
+	cava
+	pipes
+	cbonsai
+	cmatrix
+	figlet
+
+
+	# Utils:
+	lenovo-legion # hardware util
+
+	curl
+	wget 
+
+	# Weird stuff I kind of understand (Flake packages)
+	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+}

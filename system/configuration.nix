@@ -24,11 +24,4 @@
     ];
     system.stateVersion = "25.11";  # DANGER!!!! Lets not touch this for now.
 }
-	services = {
-		gnome.gnome-keyring.enable = true;
-		power-profiles-daemon.enable = true;
-		flatpak ={
-		enable = true;
-		};
-	};
 
