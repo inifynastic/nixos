@@ -1,4 +1,11 @@
 window-rule {
+    // This regular expression is intentionally made as specific as possible,
+    // since this is the default config, and we want no false positives.
+    // You can get away with just app-id="wezterm" if you want.
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    default-column-width {}
+}
+window-rule {
     match is-focused=false
     opacity 0.8
     background-effect {
@@ -19,12 +26,18 @@ window-rule {
 
     background-effect {
         blur true
-	    xray true
+	xray true
     }
 }
 
 // Enable blur behind the fuzzel launcher.
+layer-rule {
+    match namespace="launcher"
 
+    background-effect {
+        blur true
+    }
+}
 window-rule {
     geometry-corner-radius 8 
     draw-border-with-background false
