@@ -29,11 +29,13 @@
 	gnumake
 	ninja
 	
+	zip
+	unzip
 	qtcreator
 	# vesktop
-  discord
+  	discord
 	vscode
-	sublime
+	emacs
 	geany
 	vivaldi
 	neovim
@@ -41,7 +43,7 @@
 	obs-studio
 	vlc
 	libreoffice-fresh
-  gdb
+  	gdb
 	
 	tor
 	
@@ -110,23 +112,23 @@ services.swayidle = {
   # plain files is through 'home.file'.
     home.file = {
 	".config/niri/config.kdl" = {
-		source = ./niri/config.kdl;
+		source = ./dotfiles/niri/config.kdl;
 		force = true;
 	};
 	".config/waybar/config.jsonc"={
-		source = ./waybar/config.jsonc;
+		source = ./dotfiles/waybar/config.jsonc;
 		force = true;
 	};
 	".config/waybar/style.css"={
-		source = ./waybar/style.css;
+		source = ./dotfiles/waybar/style.css;
 		force = true;
 	};
 	".config/alacritty/alacritty.toml"={
-		source = ./alacritty/alacritty.toml;
+		source = ./dotfiles/alacritty/alacritty.toml;
 		force = true;
 	};
 	".config/fuzzel/fuzzel.ini"={
-		source = ./fuzzel/fuzzel.ini;
+		source = ./dotfiles/fuzzel/fuzzel.ini;
 		force = true;
 	};
 	
