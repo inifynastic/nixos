@@ -1,4 +1,5 @@
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "$HOME/.local/share/resources/wallpapers/wallpaper4.jpg" "-m" "fill"
+spawn-at-startup "sh" "-c" "swaybg" "-i" "$HOME/.local/share/resources/wallpapers/wallpaper4.jpg" "-m" "fill"
+//swaybg -i $HOME/.local/share/resources/wallpapers/wallpaper4.jpg -m fill
 
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"

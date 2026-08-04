@@ -31,4 +31,20 @@
       "before-sleep" = "swaylock -f";
     };
   };
+
+  systemd.user.services.swaybg = {
+    Unit = {
+      Description = "Wallpaper";
+      PartOf = [ "graphical-session.target" ];
+    };
+
+    Service = {
+      ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${config.xdg.dataHome}/resources/wallpapers/wallpaper4.jpg -m fill";
+      Restart = "on-failure";
+    };
+
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+    };
+};
 }
