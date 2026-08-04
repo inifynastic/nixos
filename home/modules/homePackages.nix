@@ -18,7 +18,7 @@
 	# IDE / Text Editors
 	qtcreator
 	vscode
-	emacs
+	emacs-pgtk
 	geany
 	neovim
 
