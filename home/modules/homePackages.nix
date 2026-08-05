@@ -12,7 +12,14 @@
 	ninja
 	zip
 	unzip
-	gdb 
+	gdb
+
+	# Language Server
+	libclang
+	pyright
+	ruby-lsp
+	bash-language-server	
+	nil 
 
 	
 	# IDE / Text Editors
