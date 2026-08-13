@@ -69,13 +69,15 @@
 	cbonsai
 	cmatrix
 	figlet
+	ani-cli	
 
 
 	# Utils:
 	lenovo-legion # hardware util
 
 	curl
-	wget 
+	wget
+	iw
 
 	# Weird stuff I kind of understand (Flake packages)
 	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default

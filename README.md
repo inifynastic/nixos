@@ -140,4 +140,4 @@ Current goals:
 Built with NixOS ❤️
 
 
-Also if you found out that this is AI generated then you are correct. I am too lazy to make a proper README.md
+Also if you found out that READ ME is AI generated then you are correct. I am too lazy to make a proper README.md
