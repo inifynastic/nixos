@@ -52,3 +52,4 @@ pkgs.mkShell {
     export CMAKE_PREFIX_PATH=${qtEnv}
     export QT_QPA_PLATFORM_PLUGIN_PATH=${qtEnv}/lib/qt-6/plugins/platforms
   '';
+}
