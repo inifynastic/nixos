@@ -1,5 +1,5 @@
 {
-  description = "Nixos config flake";
+  description = "Inifynity NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
@@ -12,20 +12,26 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    #niri-wm = {
-#	url = "git@github:niri-wm/niri";
-#	inputs.nixpkgs.follows = "nixpkgs-unstable";
-#	};
   };
 
-  outputs = { self, nixpkgs, home-manager,  ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager,  ... }@inputs: 
+    let 
+	system = "x86_64-linux";
+	
+	pkgs = import nixpkgs {
+		inherit system;
+		config.allowUnfree = true;
+	};
+
+    in{	
     nixosConfigurations.NixOS = nixpkgs.lib.nixosSystem {
+	inherit system;
       specialArgs = {inherit inputs;};
       modules = [
         ./system/configuration.nix
          inputs.home-manager.nixosModules.home-manager
       ];
     };
+      devShells.${system}.default = import ./development {inherit pkgs;};
   };
 }

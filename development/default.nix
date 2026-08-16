@@ -1,0 +1,54 @@
+{ pkgs }:
+
+let
+  qtEnv = with pkgs.qt6;
+    env "qt-custom-${qtbase.version}" [
+      qtbase
+      qttools
+      qtdeclarative
+    ];
+in
+pkgs.mkShell {
+  packages = with pkgs; [
+    # C++
+    gcc
+    clang-tools
+    cmake
+    ninja
+    pkg-config
+
+    # Drogon / Web
+    drogon
+    onnxruntime
+    jsoncpp
+    libuuid
+    zlib
+    openssl_4_0
+    libpq
+    sqlite
+    yaml-cpp
+
+    # Qt
+    qtEnv
+    libGL
+    libglvnd
+
+    # Python
+    python3
+    python313Packages.numpy
+    python313Packages.opencv4
+    python313Packages.pandas
+    python313Packages.tkinter
+
+    # Dart / Flutter
+    dart
+    flutter
+
+    # General
+    git
+  ];
+
+  shellHook = ''
+    export CMAKE_PREFIX_PATH=${qtEnv}
+    export QT_QPA_PLATFORM_PLUGIN_PATH=${qtEnv}/lib/qt-6/plugins/platforms
+  '';
