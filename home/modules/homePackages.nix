@@ -69,7 +69,8 @@
 	cbonsai
 	cmatrix
 	figlet
-	ani-cli	
+	ani-cli
+	prismlauncher		
 
 
 	# Utils:
