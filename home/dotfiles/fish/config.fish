@@ -5,3 +5,6 @@ if status is-interactive
 
 end
 fortune | cowsay -f sus
+alias develop='nix develop ~/etc/nixos'
+alias update-flake='nix flake update ~/etc/nixos'
+alias rebuild-nix='sudo nixos-rebuild switch --flake ~/etc/nixos#NixOS'
