@@ -23,7 +23,7 @@
 
 	
 	# IDE / Text Editors
-	qtcreator
+	qt6Packages.qttools	
 	vscode
 	emacs-pgtk
 	geany
@@ -31,7 +31,7 @@
 
 	
 	# Wayland Desktop
-  discord
+  	discord
 	
 	vivaldi
 	tor

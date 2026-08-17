@@ -44,6 +44,8 @@ pkgs.mkShell {
     dart
     flutter
 
+    #Android Toosl
+    androidsdk 
     # General
     git
   ];
