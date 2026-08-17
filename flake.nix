@@ -20,7 +20,10 @@
 	
 	pkgs = import nixpkgs {
 		inherit system;
-		config.allowUnfree = true;
+		config = {
+			allowUnfree = true;
+			android_sdk.accept_license = true;
+		};
 	};
 
     in{	
