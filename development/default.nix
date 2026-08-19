@@ -45,12 +45,11 @@ pkgs.mkShell {
     flutter
 
     #Android Toosl
-    androidsdk 
+    androidenv.androidPkgs.emulator
     # General
     git
   ];
 
-	nixpkgs.config.android_sdk.accept_license = true;	
 
   shellHook = ''
     export CMAKE_PREFIX_PATH=${qtEnv}
