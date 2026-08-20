@@ -70,7 +70,7 @@
 	cmatrix
 	figlet
 	ani-cli
-	prismlauncher		
+	lunar-client
 
 
 	# Utils:
