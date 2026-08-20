@@ -3,9 +3,6 @@
 let
   qtEnv = with pkgs.qt6;
     env "qt-custom-${qtbase.version}" [
-      qtbase
-      qttools
-      qtdeclarative
     ];
 in
 pkgs.mkShell {
@@ -29,7 +26,9 @@ pkgs.mkShell {
     yaml-cpp
 
     # Qt
-    qtEnv
+    qt6.qtbase
+    qt6.qttools
+    qt6.qtdeclarative
     libGL
     libglvnd
 
