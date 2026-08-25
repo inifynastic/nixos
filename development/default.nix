@@ -9,10 +9,13 @@ pkgs.mkShell {
   packages = with pkgs; [
     # C++
     gcc
+    clang
     clang-tools
     cmake
     ninja
     pkg-config
+    glib
+    gtk3
 
     # Drogon / Web
     drogon
