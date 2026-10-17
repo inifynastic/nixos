@@ -15,6 +15,7 @@
 		capitaine-cursors
 		mesa-demos
     dmidecode
+		cudaPackages.cudatoolkit
 	];
 
   fonts.packages = with pkgs; [

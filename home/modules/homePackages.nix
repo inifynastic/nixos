@@ -42,6 +42,7 @@
 	vlc
 	
 	libreoffice-fresh
+	virtualbox
 
 	# Desktop config stuff	
 	mako

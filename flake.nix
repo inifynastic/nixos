@@ -35,6 +35,8 @@
          inputs.home-manager.nixosModules.home-manager
       ];
     };
-      devShells.${system}.default = import ./development {inherit pkgs;};
+      devShells = {
+	${system}.default = import ./development {inherit pkgs;};
+	};
   };
 }
