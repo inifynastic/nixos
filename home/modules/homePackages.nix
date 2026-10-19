@@ -32,7 +32,7 @@
 	
 	# Wayland Desktop
   	discord
-	
+	floorp-bin
 	vivaldi
 	tor
 	
@@ -71,7 +71,6 @@
 	cmatrix
 	figlet
 	ani-cli
-	lunar-client
 
 
 	# Utils:
@@ -82,6 +81,6 @@
 	iw
 
 	# Weird stuff I kind of understand (Flake packages)
-	inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+	 inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }
