@@ -7,5 +7,7 @@
     VISUAL = "vim";
     BROWSER = "zen";
     TERMINAL = "alacritty";
+    GDK_SCALE = "1";
+    GDK_DPI_SCALE = "1.5";
   };
 }
