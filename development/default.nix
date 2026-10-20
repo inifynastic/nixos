@@ -47,7 +47,7 @@ pkgs.mkShell {
     flutter
 
     #Android Toosl
-    androidenv.androidPkgs.emulator
+    #androidenv.androidPkgs.emulator
     # General
     git
   ];
