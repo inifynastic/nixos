@@ -43,3 +43,7 @@ window-rule {
     draw-border-with-background false
     clip-to-geometry true
 }
+
+environment {
+    QT_SCALE_FACTOR "1.5"
+}

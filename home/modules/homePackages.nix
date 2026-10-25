@@ -71,6 +71,9 @@
 	cmatrix
 	figlet
 	ani-cli
+	stockfish
+	chessx
+	gnuchess
 
 
 	# Utils:
