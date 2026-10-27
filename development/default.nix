@@ -36,11 +36,12 @@ pkgs.mkShell {
     libglvnd
 
     # Python
-    python3
-    python313Packages.numpy
-    python313Packages.opencv4
-    python313Packages.pandas
-    python313Packages.tkinter
+    python314
+    python314Packages.numpy
+    python314Packages.opencv4
+    python314Packages.pandas
+    odoo19
+    python314Packages.django
 
     # Dart / Flutter
     dart
