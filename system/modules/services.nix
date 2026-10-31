@@ -10,4 +10,5 @@
       enable = true;
       };
 	};
+	time.hardwareClockInLocalTime = true;	
 }
